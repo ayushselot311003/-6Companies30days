@@ -1,0 +1,247 @@
+class Solution {
+public:
+   vector<vector<int>> combinationSum3(int K, int n)
+{
+    vector<vector<int>>v;
+    if(K==2 && n>=3)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            if((n-i)>=1 && (n-i)<=9 && (n-i)>i )
+            {
+                vector<int>t;
+                t.push_back(i);
+                t.push_back(n-i);
+                v.push_back(t);
+                
+            }
+        }
+    }
+    else if(K==3 && n>=6)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+            
+            if((n-i-j)>=1 && (n-i-j)<=9 && (n-i-j)>i && (n-i-j)>j )
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                t.push_back(n-i-j);
+                v.push_back(t);
+                
+            }
+            }
+        }
+    }
+    else if(K==4 && n>=10)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+            
+            if((n-i-j-k)>=1 && (n-i-j-k)<=9 && (n-i-j-k)>i && (n-i-j-k)>j && (n-i-j-k)>k )
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                t.push_back(n-i-j-k);
+                v.push_back(t);
+                
+            }
+                }
+            }
+        }
+    }
+     else if(K==5 && n>=15)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    for(int l=k+1;l<=9;l++)
+                    {
+            
+            if((n-i-j-k-l)>=1 && (n-i-j-k-l)<=9 && (n-i-j-k-l)>i && (n-i-j-k-l)>j && (n-i-j-k-l)>k && (n-i-j-k-l)>l )
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                 t.push_back(l);
+                t.push_back(n-i-j-k-l);
+                v.push_back(t);
+                
+            }
+                    }
+                }
+            }
+        }
+    }
+    else if(K==6 && n>=21)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    for(int l=k+1;l<=9;l++)
+                    {
+                        for(int m=l+1;m<=9;m++)
+                        {
+            
+            if((n-i-j-k-l-m)>=1 && (n-i-j-k-l-m)<=9 && (n-i-j-k-l-m)>i && (n-i-j-k-l-m)>j && (n-i-j-k-l-m)>k && (n-i-j-k-l-m)>l && (n-i-j-k-l-m)>m)
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                 t.push_back(l);
+                 t.push_back(m);
+                t.push_back(n-i-j-k-l-m);
+                v.push_back(t);
+                
+            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else if(K==7 && n>=28)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    for(int l=k+1;l<=9;l++)
+                    {
+                        for(int m=l+1;m<=9;m++)
+                        {
+                            for(int N=m+1;N<=9;N++)
+                            {
+            
+            if((n-i-j-k-l-m-N)>=1 && (n-i-j-k-l-m-N)<=9 && (n-i-j-k-l-m-N)>i && (n-i-j-k-l-m-N)>j && (n-i-j-k-l-m-N)>k && (n-i-j-k-l-m-N)>l && (n-i-j-k-l-m-N)>m && (n-i-j-k-l-m-N)>N)
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                 t.push_back(l);
+                 t.push_back(m);
+                 t.push_back(N);
+                t.push_back(n-i-j-k-l-m-N);
+                v.push_back(t);
+                
+            }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+     else if(K==8 && n>=36)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    for(int l=k+1;l<=9;l++)
+                    {
+                        for(int m=l+1;m<=9;m++)
+                        {
+                            for(int N=m+1;N<=9;N++)
+                            {
+                                for(int o=N+1;o<=9;o++)
+                                {
+            
+            if((n-i-j-k-l-m-N-o)>=1 && (n-i-j-k-l-m-n-o)<=9 && (n-i-j-k-l-m-N-o)>i && (n-i-j-k-l-m-N-o)>j && (n-i-j-k-l-m-N-o)>k && (n-i-j-k-l-m-N-o)>l && (n-i-j-k-l-m-N-o)>m && (n-i-j-k-l-m-N-o)>N && (n-i-j-k-l-m-N-o)>o)
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                 t.push_back(l);
+                 t.push_back(m);
+                 t.push_back(N);
+                 t.push_back(o);
+                t.push_back(n-i-j-k-l-m-N-o);
+                v.push_back(t);
+                
+            }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else if(K==9 && n>=45)
+    {
+        for(int i=1;i<=9;i++)
+        {
+            for(int j=i+1;j<=9;j++)
+            {
+                for(int k=j+1;k<=9;k++)
+                {
+                    for(int l=k+1;l<=9;l++)
+                    {
+                        for(int m=l+1;m<=9;m++)
+                        {
+                            for(int N=m+1;N<=9;N++)
+                            {
+                                for(int o=N+1;o<=9;o++)
+                                {
+                                    for(int p= o+1;p<=9;p++)
+                                    {
+            
+            if((n-i-j-k-l-m-N-o-p)>=1 && (n-i-j-k-l-m-n-o-p)<=9 && (n-i-j-k-l-m-N-o-p)>i && (n-i-j-k-l-m-N-o-p)>j && (n-i-j-k-l-m-N-o-p)>k && (n-i-j-k-l-m-N-o-p)>l && (n-i-j-k-l-m-N-o-p)>m && (n-i-j-k-l-m-N-o-p)>N && (n-i-j-k-l-m-N-o-p)>p)
+            {
+                vector<int>t;
+                t.push_back(i);
+                 t.push_back(j);
+                 t.push_back(k);
+                 t.push_back(l);
+                 t.push_back(m);
+                 t.push_back(N);
+                 t.push_back(o);
+                 t.push_back(p);
+                t.push_back(n-i-j-k-l-m-N-o-p);
+                v.push_back(t);
+                
+            }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        //vector<int>t={};
+        v={};
+    }
+    
+    
+    return v;
+    
+}
+};
